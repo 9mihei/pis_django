@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Архив всех статей</title>
+    <link rel="stylesheet" href="/static/css/article.css">
+</head>
+<body class="archive">
+    <div class="header">
+        <div class="header-top">
+            <img class="logo" src="/static/img/dpb-logo.png" alt="Логотип">
+            <div class="header-text-area">
+                <p class="service-title">Коллективный блог</p>
+                {% if user.is_authenticated %}
+                    <span class="header-user">{{ user.username }}</span>
+                    <a href="/logout/" class="header-link">Выйти</a>
+                {% else %}
+                    <a href="/register/" class="header-link">Регистрация</a>
+                    <a href="/login/" class="header-link">Вход</a>
+                {% endif %}
+                <a href="/article/new/" class="header-link">Новая запись</a>
+            </div>
+        </div>
+        <div class="icons-for-parallax">
+            <img class="icon-for-parallax-first" src="/static/img/article-icon-for-parallax.png" alt="Иконка 1">
+            <img class="icon-for-parallax-second" src="/static/img/article-icon-for-parallax.png" alt="Иконка 2">
+            <img class="icon-for-parallax-third" src="/static/img/article-icon-for-parallax.png" alt="Иконка 3">
+        </div>
+    </div>
+
+    <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+            <div class="post-header">
+                <h2 class="post-title">
+                    <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+                </h2>
+                <button class="fold-button">Свернуть</button>
+            </div>
+            <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+            <div class="one-post-shadow"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/helloworld.js"></script>
+    <script src="/static/js/fold-post.js"></script>
+    <script src="/static/js/highlight-post.js"></script>
+    <script src="/static/js/parallax.js"></script>
+</body>
+</html>
