@@ -1,0 +1,25 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #333;
+}
+table {
+    border-collapse: collapse;
+	width: 100%;
+}
+p, h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+ul, ol {
+    margin: 0;
+}
+table tr td {
+    padding: 5px;
+}
+h1 {
+    font-family: Georgia, Times, serif;
+}
+img {
+    height: 30px;
+}
