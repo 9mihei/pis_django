@@ -1,0 +1,107 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #ffffff;
+}
+
+.article {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
+/* Стили для страницы отдельной статьи */
+body.article {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article .header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.article .header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article .header a {
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.article .header a:hover {
+    text-decoration: underline;
+}
+
+.article .one-post {
+    margin-bottom: 60px;
+}
+
+.article .post-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.article .article-info {
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+
+.article .article-author {
+    width: 50%;
+    float: left;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.article .article-created-date {
+    width: 50%;
+    float: left;
+    text-align: right;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.article .article-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
